@@ -34,6 +34,8 @@
   //Default config/variables
   var VERSION = '2.9.3';
 
+
+  
   /**
    * IntroJs main class
    *
