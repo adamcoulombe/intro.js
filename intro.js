@@ -7,7 +7,7 @@
  */
 
 
- 
+
 (function (f) {
   if (typeof exports === "object" && typeof module !== "undefined") {
     module.exports = f();
@@ -270,23 +270,23 @@
   }
 
 
-  * on keyCode:
-  * https:
-  * This feature has been removed from the Web standards.
-  * Though some browsers may still support it, it is in
-  * the process of being dropped.
-  * Instead, you should use KeyboardEvent.code,
-  * if it's implemented.
-  *
-  * jQuery's approach is to test for
-  *   (1) e.which, then
-  *   (2) e.charCode, then
-  *   (3) e.keyCode
-  * https:
-  *
-  * @param type var
-  * @return type
-  */
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   function _onKeyDown(e) {
     var code = (e.code === null) ? e.which : e.code;
 
@@ -807,13 +807,13 @@
   }
 
 
-  * auto-determine alignment
-  * @param {Integer}  offsetLeft
-  * @param {Integer}  tooltipWidth
-  * @param {Object}   windowSize
-  * @param {String}   desiredAlignment
-  * @return {String}  calculatedAlignment
-  */
+  
+  
+  
+  
+  
+  
+  
   function _determineAutoAlignment(offsetLeft, tooltipWidth, windowSize, desiredAlignment) {
     var halfTooltipWidth = tooltipWidth / 2,
       winWidth = Math.min(windowSize.width, window.screen.width),
@@ -1383,13 +1383,13 @@
   }
 
 
-  * Iterates arrays
-  *
-  * @param {Array} arr
-  * @param {Function} forEachFnc
-  * @param {Function} completeFnc
-  * @return {Null}
-  */
+  
+  
+  
+  
+  
+  
+  
   function _forEach(arr, forEachFnc, completeFnc) {
     
     if (arr) {
@@ -1404,13 +1404,13 @@
   }
 
 
-  * Mark any object with an incrementing number
-  * used for keeping track of objects
-  *
-  * @param Object obj   Any object or DOM Element
-  * @param String key
-  * @return Object
-  */
+  
+  
+  
+  
+  
+  
+  
   var _stamp = (function () {
     var keys = {};
     return function stamp(obj, key) {
@@ -1432,13 +1432,13 @@
   })();
 
 
-  * DOMEvent Handles all DOM events
-  *
-  * methods:
-  *
-  * on - add event handler
-  * off - remove event
-  */
+  
+
+  
+  
+  
+  
+  
   var DOMEvent = (function () {
     function DOMEvent() {
       var events_key = 'introjs_event';
@@ -1727,11 +1727,11 @@
   }
 
 
-  * Get a queryselector within the hint wrapper
-  *
-  * @param {String} selector
-  * @return {NodeList|Array}
-  */
+
+
+
+
+
   function _hintQuerySelectorAll(selector) {
     var hintsWrapper = document.querySelector('.introjs-hints');
     return (hintsWrapper) ? hintsWrapper.querySelectorAll(selector) : [];
@@ -2031,12 +2031,12 @@
   }
 
 
-  * Find the nearest scrollable parent
-  * copied from https:
-  *
-  * @param Element element
-  * @return Element
-  */
+
+
+
+
+
+
   function _getScrollParent(element) {
     var style = window.getComputedStyle(element);
     var excludeStaticParent = (style.position === "absolute");
@@ -2056,12 +2056,12 @@
   }
 
 
-  * scroll a scrollable element to a child element
-  *
-  * @param Element parent
-  * @param Element element
-  * @return Null
-  */
+
+
+
+
+
+
   function _scrollParentToElement(parent, element) {
     parent.scrollTop = element.offsetTop - parent.offsetTop;
   }
@@ -2116,11 +2116,11 @@
   introJs.version = VERSION;
 
 
-  * key-val object helper for introJs instances
-  *
-  * @property instances
-  * @type Object
-  */
+
+
+
+
+
   introJs.instances = {};
 
   
