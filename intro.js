@@ -800,7 +800,7 @@
 
 
     if (['top', 'bottom'].indexOf(calculatedPosition) !== -1) {
-      calculatedPosition += _determineAutoAlignment(targetElementRect.left, tooltipWidth, windowSize, desiredAlignment);
+      calculatedPosition += _determineAutoAlignment(targetElementRect.left, tooltipWidth, windowSize, desiredAlignment, targetElementRect.width);
     }
 
     return calculatedPosition;
@@ -814,7 +814,7 @@
 
 
 
-  function _determineAutoAlignment(offsetLeft, tooltipWidth, windowSize, desiredAlignment) {
+  function _determineAutoAlignment(offsetLeft, tooltipWidth, windowSize, desiredAlignment, targetElementWidth) {
     var halfTooltipWidth = tooltipWidth / 2,
       winWidth = Math.min(windowSize.width, window.screen.width),
       possibleAlignments = ['-left-aligned', '-middle-aligned', '-right-aligned'],
@@ -833,9 +833,7 @@
       _removeEntry(possibleAlignments, '-middle-aligned');
     }
 
-
-
-    if (offsetLeft < tooltipWidth) {
+    if (tooltipWidth > (offsetLeft + targetElementWidth)) {
       _removeEntry(possibleAlignments, '-right-aligned');
     }
 
@@ -849,7 +847,7 @@
       }
     } else {
 
-
+      console.log("no desired alignment")
 
       calculatedAlignment = '-middle-aligned';
     }
