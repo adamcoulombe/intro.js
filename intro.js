@@ -36,8 +36,8 @@
     this._options = {
       nextLabel: 'Next &rarr;',
       prevLabel: '&larr; Back',
-      skipLabel: 'Skip',
-      doneLabel: 'Done',
+      skipLabel: 'Skip Tour',
+      doneLabel: 'Finish',
       hidePrev: false,
       hideNext: false,
       tooltipPosition: 'bottom',
@@ -58,7 +58,7 @@
       disableInteraction: false,
       helperElementPadding: 10,
       hintPosition: 'top-middle',
-      hintButtonLabel: 'Got it',
+      hintButtonLabel: 'OK',
       hintAnimation: true,
       buttonClass: "introjs-button"
     };
