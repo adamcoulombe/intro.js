@@ -21,6 +21,8 @@
   //Default config/variables
   var VERSION = '2.0';
 
+
+  
   /**
    * IntroJs main class
    *
